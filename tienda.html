@@ -3,9 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Online</title>
+    <title>Aroma a Café</title>
+    <link rel="STYLESHEET" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <script src="scripts.js"></script>
 </head>
 <body>
+    <header>
+        <!-- Poner el logo del cafe y el nav-->
+    </header>
+    
+    <section id="menu">
+        <h2>Seleccione su región de café preferida:</h2>
+    
+        <form>
+    
+            <div class="container-form">
+                <div class="region" id="sudamerica">
+                    <h2>Sudamérica</h2>
+                </div>
+                <div class="region" id="centroamerica">
+                    <h2>Centroamérica</h2>
+                </div>
+                <div class="region" id="africa">
+                    <h2>África</h2>
+                </div>
+            </div>
+
+        </form>
+
+        <h2>Productos</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Expreso">
+                <div class="texto-producto">
+                    <h3>Expreso</h3>
+                    <p>Café solo</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Americano">
+                <div class="texto-producto">
+                    <h3>Americano</h3>
+                    <p>Café rebajado</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>   
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Macchiato" >
+                <div class="texto-producto">
+                    <h3>Macchiato</h3>
+                    <p>Café espumoso</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Expreso Panna">
+                <div class="texto-producto">    
+                    <h3>Expreso Panna</h3>
+                    <p>Café con crema batida</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/doble.jpg" alt="Café Doble" >
+                <div class="texto-producto">
+                    <h3>Doble</h3>
+                    <p>Café doble</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Cortado">
+                <div class="texto-producto">
+                    <h3>Cortado</h3>
+                    <p>Café 75%, Leche 25%</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café con leche">
+                <div class="texto-producto">
+                    <h3>Café con Leche</h3>
+                    <p>Café 50%, Leche 50%</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Lágrima" >
+                <div class="texto-producto">
+                    <h3>Lágrima</h3>
+                    <p>Café 10%, Leche 90%</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Cappuchino">
+                <div class="texto-producto">
+                    <h3>Cappuchino</h3>
+                    <p>Café con espuma + leche, chocolate, canela</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Latte">
+                <div class="texto-producto">
+                    <h3>Latte</h3>
+                    <p>Café con espuma + leche</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Breve" >
+                <div class="texto-producto">
+                    <h3>Breve</h3>
+                    <p>Café con leche y crema</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Irlandés">
+                <div class="texto-producto">
+                    <h3>Irlandés</h3>
+                    <p>Café con whisky y crema batida</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+            </div>
+            </div>
+            
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Hawaiano" >
+                <div class="texto-producto">
+                    <h3>Hawaiano</h3>
+                    <p>Café con leche de coco</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Árabe" >
+                <div class="texto-producto">
+                    <h3>Árabe</h3>
+                    <p>Café con especias</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img src="./archivos/aroma_cafe.jpeg" alt="Café Caribeño">
+                <div class="texto-producto">
+                    <h3>Caribeño</h3>
+                    <p>Café con ron, azucar moreno y vainilla</p>
+                    <p>Precio: $2.50</p>
+                    <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
+                    <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    
+    
     
 </body>
 </html>
