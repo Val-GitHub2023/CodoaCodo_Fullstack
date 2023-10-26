@@ -1,25 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const regions = document.querySelectorAll('.region');
+//Tienda - Regiones transicion...y cambio de color
+document.addEventListener("DOMContentLoaded", function() {
+    const regiones = document.querySelectorAll(".region");
 
-    regions.forEach(function (region) {
-        region.addEventListener("click", function () {
-            const selectedRegion = this.id;
-            document.body.style.backgroundColor = getBackgroundColorForRegion(selectedRegion);
+    regiones.forEach(region => {
+        region.addEventListener("click", function() {
+            const regionID = this.id;
+
+            // colores para el fondo
+            const coloresFondo = {
+                sudamerica: "#6A8A82",
+                centroamerica: "#A37C27",
+                africa: "#563838"
+            };
+
+            // fondo del body
+            document.body.style.background = coloresFondo[regionID];
+            // animacion
+            document.body.classList.add("animacionFondo");
         });
     });
-
-    function getBackgroundColorForRegion(region) {
-        switch (region) {
-            case "sudamerica":
-                return "sudamerica_bg.jpeg"; // Marrón
-            case "centroamerica":
-                return "#996515"; // Naranja
-            case "africa":
-                return "#6A5ACD"; // Azul violeta
-            default:
-                return "#ffffff"; // Color de fondo predeterminado
-        }
-    }
 });
 
 
@@ -60,7 +59,7 @@ function resetForm() {
     document.getElementById("message").value = "";
 }
 
-//Funcion para api del clima - ciudad de Buenos
+//Funcion para api del clima - ciudad de Buenos-------------------------
 function getWeather() {
     const apiKey = '2b2a060438008cd02cde9c7391696f49';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires&units=metric&lang=es&appid=${apiKey}`;

@@ -101,16 +101,18 @@ label {
     transition: background-color 0.3s ease;
 }
 
+
 /* Formato para el cuadro de clima API -------------------------------------------------*/
 .weather {
-    background-color: rgb(194, 172, 172);
+    background-color: #2A3457;
     padding: 10px;
     border-radius: 10px;
     margin-top: 20px;
-    max-width: 300px;
+    width: 500px;
     margin: 0 auto;
-    color: #474343;
+    color: #111214;
     text-align: center;
+    transition: all 2s;
 }
 
 
@@ -119,6 +121,12 @@ label {
     margin: 0 auto;
     max-width: 100px;
 }
+
+.weather:hover{
+    background: #A4A4BF;
+    width: 100%;
+    color: #0f0901;
+    font-weight: bolder;}
 
 
 /* Formatos para los productos -------------------------------------------------------------*/
@@ -129,6 +137,7 @@ label {
     box-shadow: 0 0 10px #727272;
     margin: 15px;
     height: 600px;
+    background-color: #F1E0D6;
 }
 
 .producto img {
@@ -160,13 +169,20 @@ label {
     display: flex;
     justify-content: center; /* Centrar horizontalmente el contenido */
     align-items: center; /* Centrar verticalmente el contenido */
-    background-color: #fff;
+    background-color: #e4dede;  /*cambiar fondo contenedor form*/
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px; /* Ajusta el relleno según tus necesidades */
+    padding: 20px; 
     max-width: 100%; /* Limita el ancho máximo del contenedor */
+    transition: all 2s;
 }
+/* aqui agrego transiciones al contenedor cuando paso el mouse */
 
+.container-form:hover{
+    background: linear-gradient(#000a);
+    transition: all 2s;
+    
+}
 .contact-info {
     flex: 1; /* Toma el espacio disponible a la izquierda */
     padding: 20px; /* Ajusta el relleno según tus necesidades */
@@ -221,4 +237,39 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+
+/* formatos para las redes sociales  */
+.redes-sociales a {
+    display: inline-block;
+    margin-right: 10px; /* Espacio entre los iconos */
+}
+
+.redes-sociales img {
+    width: 30px; /* Tamaño de los iconos */
+    height: 30px;
+}
+
+/* formato para mapa, direccion y medios de pago */
+.mapa-container {
+    display: flex;
+    justify-content: space-between;
+    background: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.mapa {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #2A3457;
+    
+}
+
+.mapa-info {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
 }
