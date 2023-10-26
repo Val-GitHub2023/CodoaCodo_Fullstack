@@ -2,117 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- para que sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aroma a Café</title>
     <link rel="STYLESHEET" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <script src="scripts.js"></script>
 </head>
+
 <body>
     <header>
-        <!-- Poner el logo del cafe y el nav-->
+        <!-- MENU NAV  ------------------------------------------>
+        <div class="divHeader">
+            <div id="div1">
+                <h1>AROMA A CAFÉ</h1>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="tienda.html">PRODUCTOS</a></li>
+                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
-    
+
+
+<!-- Clima en tiempo real API ------------------------------------------>
+        <div class="weather">
+            <p>Temperatura: <span id="temperature"></span> °C</p>
+            <img id="weather-image" src="" alt="Clima">
+        </div>
+<br><br>
+<!-- MENU DE REGIONES--------------------------- -->
     <section id="menu">
-        <h2>Seleccione su región de café preferida:</h2>
-    
+        <!-- <h2>Seleccione que región desea conocer:</h2> -->
         <form>
     
-            <div class="container-form">
+            <div class="container_regiones">
                 <div class="region" id="sudamerica">
-                    <h2>Sudamérica</h2>
+                    <h2>Sudamerica</h2>
                 </div>
                 <div class="region" id="centroamerica">
-                    <h2>Centroamérica</h2>
+                    <h2>Centroamerica</h2>
                 </div>
                 <div class="region" id="africa">
-                    <h2>África</h2>
+                    <h2>Africa</h2>
                 </div>
             </div>
 
         </form>
 
+<!-- TARJETA DE PRODUCTOS--------------------------- -->
         <h2>Productos</h2>
         <div class="productos-container">
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Expreso">
+                <img src="./archivos/expreso.jpeg" alt="Expreso">
                 <div class="texto-producto">
                     <h3>Expreso</h3>
                     <p>Café solo</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
             
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Americano">
+                <img src="./archivos/americano.jpeg" alt="Americano">
                 <div class="texto-producto">
                     <h3>Americano</h3>
                     <p>Café rebajado</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>   
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Macchiato" >
+                <img src="./archivos/macchiato.jpeg" alt="Macchiato" >
                 <div class="texto-producto">
                     <h3>Macchiato</h3>
                     <p>Café espumoso</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
             
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Expreso Panna">
+                <img src="./archivos/panna.jpeg" alt="Expreso Panna">
                 <div class="texto-producto">    
                     <h3>Expreso Panna</h3>
                     <p>Café con crema batida</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./archivos/doble.jpg" alt="Café Doble" >
+                <img src="./archivos/doble.jpeg" alt="Café Doble" >
                 <div class="texto-producto">
                     <h3>Doble</h3>
                     <p>Café doble</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Cortado">
+                <img src="./archivos/cortado.jpeg" alt="Café Cortado">
                 <div class="texto-producto">
                     <h3>Cortado</h3>
                     <p>Café 75%, Leche 25%</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café con leche">
+                <img src="./archivos/con_leche.jpeg" alt="Café con leche">
                 <div class="texto-producto">
                     <h3>Café con Leche</h3>
                     <p>Café 50%, Leche 50%</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Lágrima" >
+                <img src="./archivos/lagrima.jpeg" alt="Café Lágrima" >
                 <div class="texto-producto">
                     <h3>Lágrima</h3>
                     <p>Café 10%, Leche 90%</p>
@@ -123,76 +147,76 @@
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Cappuchino">
+                <img src="./archivos/capuccino.jpeg" alt="Café Cappuchino">
                 <div class="texto-producto">
                     <h3>Cappuchino</h3>
                     <p>Café con espuma + leche, chocolate, canela</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Latte">
+                <img src="./archivos/latte.jpeg" alt="Café Latte">
                 <div class="texto-producto">
                     <h3>Latte</h3>
                     <p>Café con espuma + leche</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Breve" >
+                <img src="./archivos/breve.jpeg" alt="Café Breve" >
                 <div class="texto-producto">
                     <h3>Breve</h3>
                     <p>Café con leche y crema</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Irlandés">
+                <img src="./archivos/irish.jpeg" alt="Café Irlandés">
                 <div class="texto-producto">
                     <h3>Irlandés</h3>
                     <p>Café con whisky y crema batida</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
             </div>
             </div>
             
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Hawaiano" >
+                <img src="./archivos/hawaiano.jpeg" alt="Café Hawaiano" >
                 <div class="texto-producto">
                     <h3>Hawaiano</h3>
                     <p>Café con leche de coco</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Árabe" >
+                <img src="./archivos/arabe.jpeg" alt="Café Árabe" >
                 <div class="texto-producto">
                     <h3>Árabe</h3>
                     <p>Café con especias</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./archivos/aroma_cafe.jpeg" alt="Café Caribeño">
+                <img src="./archivos/caribeño.jpeg" alt="Café Caribeño">
                 <div class="texto-producto">
                     <h3>Caribeño</h3>
                     <p>Café con ron, azucar moreno y vainilla</p>
-                    <p>Precio: $2.50</p>
+                    <p>Precio: $200</p>
                     <input type="number" min="0" placeholder="Cantidad" id="cantidad1">
                     <button onclick="agregarAlCarrito('Café Espresso', 2.5, 'cantidad1')">Agregar al carrito</button>
                 </div>

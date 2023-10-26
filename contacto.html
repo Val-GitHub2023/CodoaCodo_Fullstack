@@ -3,10 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="STYLESHEET" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <script src="scripts.js"></script>
     <title>Contacto</title>
 </head>
 <body>
-    <h2>Mapa</h2>
+    <header>
+        <!-- MENU NAV  ------------------------------------------>
+        <div class="divHeader">
+            <div id="div1">
+                <h1>AROMA A CAFÉ</h1>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="tienda.html">PRODUCTOS</a></li>
+                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!-- FORMULARIO -->
+    <div class="container_form">
+        
+        <!-- iinformacion de la empresa a la derecha -->
+        <div class="contact-info">
+            <h2>Información de Contacto</h2>
+            <p><strong>Email:</strong> ejemplo@email.com</p>
+            <p><strong>Redes Sociales:</strong> @tusredes</p>
+            <p><strong>Teléfono:</strong> +123456789</p>
+            <br><br>
+            <h2>Pedidos Mayoristas</h2>
+            <p>ventamayorista@aromacafe.com.ar</p>
+            <br><br>
+            <h2>Sumate a nuestra comunidad</h2>
+            <p>logos de insta, facebook, twiter, youtube</p>
+        </div>
+        <!-- informacion del formulario a la izquierda -->
+        <div class="contact-form">
+            <form id="contact-form" onsubmit="return validacionForm()">
+                <h2>Dejanos tu mensaje</h2>
+                <div class="form-group">
+                    <label for="name">Nombre y Apellido:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        
+    </div>
+
+
+
+    <!-- MAPA INTERACTIVO -->
+    <h2>Podes encontrarnos en</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168881864242!2d-58.3841453251142!3d-34.603734457497524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1696276902709!5m2!1ses-419!2sar" width="320" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </body>
 </html>
