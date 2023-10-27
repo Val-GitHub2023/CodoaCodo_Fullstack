@@ -1,44 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
-    <!-- para que sea responsive en dispositivos moviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aroma a café</title>
-    <link rel="STYLESHEET" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="./styles.css">
 
+    <link rel="icon" href="./imágenes/favicon.ico"> <!-- link logo favicon -->
+    <script src="https://kit.fontawesome.com/1121a48ccb.js" crossorigin="anonymous"></script> <!-- kit code de fontawesome -->
+    <!-- links googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Play&display=swap" rel="stylesheet">
+    <script src="./scripts.js"></script>
 </head>
-    
+
 <body>
-    <header>
-        <!-- MENU NAV  ------------------------------------------>
-        <div class="divHeader">
-            <div id="div1">
-                <h1>AROMA A CAFÉ</h1>
+
+    <div class="contenedor-body">
+        <!-------------------- HEADER ----------------------->
+        <header class="encabezado" id="header">
+            <div class="divHeader">
+                <div id="div1">
+                    <h1>AROMA A CAFÉ</h1>
+                </div>
+                <!-- Menu nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="./index.html">INICIO</a></li>
+                        <li><a href="./tienda.html">PRODUCTOS</a></li>
+                        <li><a href="./sobreNosotros.html">SOBRE NOSOTROS</a></li>
+                        <li><a href="./contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="tienda.html">PRODUCTOS</a></li>
-                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                </ul>
-            </nav>
-        </div>
-
-    </header>
+        </header>
 
 
-    <!-- video -->
-    <h2>Video</h2>
-    <iframe width="320" height="240" src="https://www.youtube.com/embed/df3JeXVWYWA?si=5lYNn-YmEfuf_Mmz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-------------------- MAIN ----------------------->
+        <main class="contenido">
+            <div class="container">
+            <!------------ Sección el mejor café ------------->
+            <section class="sec" id="sec1">
+                <h2>EL MEJOR CAFÉ COMO EN CASA</h2>
+                <p>Si te apasiona el buen café, te ofrecemos nuestros productos de especialidad para que
+                    puedas disfrutarlo en nuestras tiendas o desde la comodidad de tu hogar.</p>
+            </section>
 
-    
-    <br><br><br><br><br>
-    </body>
-    
-    </html>
+            <!--------------- Sección misión ---------------->
+            <section class="sec" id="sec2">
+                <h2>NUESTRA MISIÓN</h2>
+                <p>Nos dedicamos a deleitar el paladar de nuestros clientes con un sabor auténtico y aromático, dejando huella en cada consumidor y en cada lugar. </p>
+            </section>
+                
+            <!--------- Sección especialistas en café -------->
+            <section class="sec" id="sec3">
+                <h2>SOMOS ESPECIALISTAS EN CAFÉ</h2>
+                <P>Para lograr un café en su mejor versión, se deben aplicar ciertos pasos en su preparación y en Aroma a café lo sabemos. Mediante el molido, tueste, selección de granos, métodos de extracción y combinaciones de exóticos ingredientes conseguimos un diverso matiz de sabores y aromas para que disfrutes en cada café. </P>
+            </section>
+
+            
+            </div>
+        </main>
+        <!------------- Sección especialidades ------------>
+        <section class="sec" id="sec4">
+            <div class="titulo">
+                <h2>NUESTRAS ESPECIALIDADES</h2>
+            </div>
+            <div class="container-especialidades">
+                <div class="producto-especial" id="producto1">
+                    <div class="producto-nombre">
+                        <h3>Hawaiano</h3>
+                    </div>
+                </div>
+                <div class="producto-especial" id="producto2">
+                    <div class="producto-nombre">
+                        <h3>Irlandés</h3>
+                    </div>
+                </div>
+                <div class="producto-especial" id="producto3">
+                    <div class="producto-nombre">
+                        <h3>Caribeño</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-------------------- FOOTER ----------------------->
+        <footer class="pie">
+            
+            <br>
+            <h4>SÍGUENOS</h4>
+            <br>
+            <div class="container-iconos-redes">
+                <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                    <i class="fa-brands fa-square-facebook fa-2xl" style="color: #09409f;"></i>
+                </a>
+                <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                    <i class="fa-brands fa-instagram fa-2xl" style="color: #c61574;"></i>
+                </a>
+                <a href="https://www.twitter.com" title="Twitter" target="_blank">
+                    <i class="fa-brands fa-x-twitter fa-2xl" style="color: #ffffff;"></i>
+                </a>
+            </div>
+            <br><br>
+            <div class="info-footer">
+                <p>©Aroma a café - 2023 - Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

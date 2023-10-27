@@ -1,15 +1,51 @@
-/* INDEX *********************************** */
-#div1{
-    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0, 0, 0, 0.5)), url(./imágenes/granoscafe.jpeg);
-    background-size: cover;
-    background-position: center;
-    height: 15vh;
-    width: 100%;
-    color: whitesmoke;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     
-    display: flex;
+}
+
+body{
+    background: radial-gradient(#e4cfb8, #2b1a02);
+    position: relative;
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* INDEX *********************************** */
+
+#div1{
+            background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0, 0, 0, 0.5)), url(./imágenes/granoscafe.jpeg);
+            background-size: cover;
+            background-position: center;
+            height: 15vh;
+            width: 100%;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;    
+}
+
+/*-------------------- Menu nav--------------- */
+#nav{
+    background-color: #331e03;
+    width: 100%;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+}
+nav li:hover{
+    background-color: rgba(0, 0, 0, 0.589); 
+}
+nav li{      
+    display: inline-flex;
+}
+nav a{
+    text-decoration: none;
+    color: antiquewhite;
+    padding: 20px 20px;
+    width: 200px;
 }
 
 #nav{
@@ -35,9 +71,176 @@ nav a{
     width: 180px;
 }
 
+/*------------- BODY SECCIONES-------------- */
+.sec{
+    margin: 50px 0px;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    height: 60vh;
+    width: 100%;
+    border: #000000 solid 2px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#sec1 h2,#sec2 h2,#sec3 h2, #sec4 h2{
+    color: antiquewhite;
+}
+
+#sec1{
+    background-image: linear-gradient(rgba(0,0,0, 0.8), rgba(0, 0, 0, 0.8)), url(./imágenes/fondoCafe1.webp);
+    margin-top: 0px;
+}
+#sec2{
+    background-image: linear-gradient(rgba(0,0,0, 0.8), rgba(0, 0, 0, 0.8)), url(./imágenes/nuestraMision2.jpg);
+}
+#sec3{
+    background-image: linear-gradient(rgba(0,0,0, 0.8), rgba(0, 0, 0, 0.8)), url(./imágenes/especialistasCafe1.png);
+}
+
+#sec4{
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0, 0, 0, 0.5)), url(./imágenes/barraFondo4.jpg);
+    background-position: bottom;   
+}
+#sec4 .titulo{
+    padding: 15px 0px;
+}
+#sec4 .container-especialidades {
+    width: 100%;
+    max-width: 100%;
+    height:300px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.producto-especial {
+    background-size: cover;
+    width: 180px;
+    height: 80%;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 8);
+}
+#producto1 {
+    background-image: url(./imágenes/hawaiano.jpeg);
+}
+#producto2 {
+    background-image: url(./imágenes/irish.jpeg);
+}
+#producto3 {
+    background-image: url(./imágenes/caribeño.jpeg);
+}
+
+.producto-nombre {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s;
+}
+.producto-nombre h3 {
+    color: rgba(255, 255, 255, 0.925);
+}
+.producto-especial:hover .producto-nombre {
+    opacity: 5;
+}
+
+/* ------------FOOTER------------- */
+footer{
+    background-color: #0f0901;
+    color: #faf8f8;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-iconos-redes a{
+    text-decoration: none;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+
+}
+
+/*------Responsive-------- */
+.contenedor-body{
+    width: 100%;
+    max-width: 1400px;
+
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: (4,auto);
+    grid-template-areas: "encabezado encabezado encabezado"
+                          "contenido contenido contenido"
+                          "sec sec sec"
+                          "pie pie pie";
+}
+.contenedor .encabezado{
+    grid-area: encabezado;
+}
+.contenedor .contenido{
+    grid-area: contenido; 
+}
+.contenedor .sec{
+    grid-area: sec;
+}
+.contenedor .pie{
+    grid-area: pie;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "sec sec sec"
+                             "pie pie pie";
+    }
+}
+
+@media screen and (max-width: 450px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                             "contenido contenido contenido"
+                             "sec sec"
+                             "pie pie pie";
+    }
+}
+/* ************************* Estilos página sobre nosotros *********************************************** */
+
+.container-nosotros{
+    margin: 10px 10px ;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.titulo-nosotros{
+    font-size: 40px;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p{
+    margin: 10px 10px;
+    text-align: justify;
+
+}
 
 
-/* MAIN FORMATO COMUN ----------------------------------------- */
+
+
+/* MAIN FORMATO COMUN ------------------------------------------------------------------- */
 body{
     background: radial-gradient(#e4cfb8, #2b1a02);
 }
@@ -113,6 +316,7 @@ label {
     color: #111214;
     text-align: center;
     transition: all 2s;
+    margin-top: 30px;
 }
 
 
@@ -159,47 +363,66 @@ label {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin-top: 3%;
     
 }
 
 
-/* ***********formatos para el form de pagina contacto */
+/* ***********formatos para el form de pagina contacto--------------------------------------------------------- */
 
 .container_form {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente el contenido */
-    align-items: center; /* Centrar verticalmente el contenido */
-    background-color: #e4dede;  /*cambiar fondo contenedor form*/
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 70%;
+    margin-top: 3%;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px; 
-    max-width: 100%; /* Limita el ancho máximo del contenedor */
     transition: all 2s;
+    background-color: #0f0901;
+    margin:3% auto;
+    
 }
+.contact-info { 
+    flex:1;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color:#A4A4BF}
+    
+.contact-form { 
+    flex:2;
+    width: 100%;    
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: #555;
+    color:#A4A4BF;}
+
+
 /* aqui agrego transiciones al contenedor cuando paso el mouse */
 
 .container-form:hover{
-    background: linear-gradient(#000a);
+    /* background: linear-gradient(#000a); */
     transition: all 2s;
     
 }
 .contact-info {
-    flex: 1; /* Toma el espacio disponible a la izquierda */
-    padding: 20px; /* Ajusta el relleno según tus necesidades */
+    margin: 10px 10px;
 }
+
 
 .contact-form {
-    flex: 1; /* Toma el espacio disponible a la derecha */
-    padding: 20px; /* Ajusta el relleno según tus necesidades */
+    color: rgb(41, 38, 38); 
 }
 
+
 h2 {
-    color: #333;
     font-size: 24px;
 }
 
 .contact-info p {
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 /* ----------estilo para el formulario contacto ------------------- */
@@ -240,36 +463,29 @@ button:hover {
 }
 
 
-/* formatos para las redes sociales  */
-.redes-sociales a {
-    display: inline-block;
-    margin-right: 10px; /* Espacio entre los iconos */
-}
-
-.redes-sociales img {
-    width: 30px; /* Tamaño de los iconos */
-    height: 30px;
-}
-
 /* formato para mapa, direccion y medios de pago */
 .mapa-container {
     display: flex;
-    justify-content: space-between;
-    background: #f7f7f7;
+    width: 80%;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #f0f0f0;
+    margin:3% auto;
 }
 
 .mapa {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    border: 2px solid #2A3457;
-    
+    border: 1px solid #ddd;
+    background-color: #fff; /* Fondo blanco para el mapa */
 }
 
 .mapa-info {
-    flex: 1;
+    flex: 2;
     padding: 10px;
     text-align: center;
+    border: 2px solid #2A3457;
 }

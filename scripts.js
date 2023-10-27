@@ -1,4 +1,4 @@
-//Tienda - Regiones transicion...y cambio de color
+//Tienda - Regiones transicion...y cambio de color--------------------------
 document.addEventListener("DOMContentLoaded", function() {
     const regiones = document.querySelectorAll(".region");
 
@@ -59,7 +59,7 @@ function resetForm() {
     document.getElementById("message").value = "";
 }
 
-//Funcion para api del clima - ciudad de Buenos-------------------------
+//Funcion para api del clima - ciudad de Buenos------------------------------------------
 function getWeather() {
     const apiKey = '2b2a060438008cd02cde9c7391696f49';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=Buenos%20Aires&units=metric&lang=es&appid=${apiKey}`;
